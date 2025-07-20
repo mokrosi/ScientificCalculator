@@ -13,8 +13,11 @@ public class ScientificCalculator {
             case 2:
                 Subtraction();
                 break;
-             case 3 :
+            case 3 :
                 Multiplication();
+                break;
+            case 4 :
+                Division();
                 break;
             default:
                 break;
@@ -174,7 +177,44 @@ public class ScientificCalculator {
 
     }
 
+    public static void Division() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter first number :");
+            int num1 = input.nextInt();
+            System.out.println("Division");
+            System.out.println("Enter Second number :");
+            int num2 = input.nextInt();
+            int resolt = num1 / num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Division();
 
+            } else {
+                main(null);
+            }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            System.out.println("Division");
+            System.out.println("Enter Second number :");
+            Double num2 = input.nextDouble();
+            Double resolt = num1 / num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Division();
+
+            } else {
+                main(null);
+            }
+        }
+
+    }
 
 
 

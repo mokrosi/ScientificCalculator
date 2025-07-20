@@ -87,7 +87,8 @@ public class ScientificCalculator {
             System.out.println("16.Maximum of two numbers");
             System.out.println("0.Exit");
             System.out.println("chose Number : ");
-            int menuChose = input.nextInt();
+            // int menuChose = intInput(input);
+            int menuChose = intInput(input);
 
             if (menuChose > -1 && menuChose <= 16) {
                 loopSwitch = false;
@@ -105,12 +106,12 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = num1 + num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -122,9 +123,9 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = num1 + num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -142,13 +143,13 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Subtraction");
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = num1 - num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -160,10 +161,10 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Subtraction");
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = num1 - num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -181,12 +182,12 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = num1 * num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -198,9 +199,9 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = num1 * num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -218,13 +219,13 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Division");
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = num1 / num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -236,10 +237,10 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Division");
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = num1 / num2;
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -255,7 +256,7 @@ public class ScientificCalculator {
 
     public static void SquareRoot() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         Double resolt = Math.sqrt(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -270,10 +271,10 @@ public class ScientificCalculator {
 
     public static void powerOf() {
         System.out.println("Enter first number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         System.out.println("power of");
         System.out.println("Enter Second number :");
-        Double num2 = input.nextDouble();
+        Double num2 = doubleInput(input);
         Double resolt = Math.pow(num1, num2);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -287,7 +288,7 @@ public class ScientificCalculator {
 
     public static void sin() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         Double resolt = Math.sin(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -302,7 +303,7 @@ public class ScientificCalculator {
 
     public static void tan() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         Double resolt = Math.tan(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -317,7 +318,7 @@ public class ScientificCalculator {
 
     public static void ln() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         Double resolt = Math.log(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -332,7 +333,7 @@ public class ScientificCalculator {
 
     public static void ln10() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         Double resolt = Math.log10(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -349,10 +350,10 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter  number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             int resolt = Math.abs(num1);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -364,7 +365,7 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             Double resolt = Math.abs(num1);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -380,7 +381,7 @@ public class ScientificCalculator {
 
     public static void round() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         int resolt = (int) Math.round(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -396,7 +397,7 @@ public class ScientificCalculator {
     // Ceiling
     public static void Ceiling() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         int resolt = (int) Math.ceil(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -412,7 +413,7 @@ public class ScientificCalculator {
     // Floor
     public static void Floor() {
         System.out.println("Enter number :");
-        Double num1 = input.nextDouble();
+        Double num1 = doubleInput(input);
         int resolt = (int) Math.floor(num1);
         System.out.println("resoult : " + resolt);
         int repeat = askToDoAgine();
@@ -430,12 +431,12 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = Math.min(num1, num2);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -447,9 +448,9 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = Math.min(num1, num2);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -467,12 +468,12 @@ public class ScientificCalculator {
         System.out.println("1.integer");
         System.out.println("2.Double");
         System.out.println("chose type :");
-        int typeChose = input.nextInt();
+        int typeChose = intInput(input);
         if (typeChose == 1) {
             System.out.println("Enter first number :");
-            int num1 = input.nextInt();
+            int num1 = intInput(input);
             System.out.println("Enter Second number :");
-            int num2 = input.nextInt();
+            int num2 = intInput(input);
             int resolt = Math.max(num1, num2);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -484,9 +485,9 @@ public class ScientificCalculator {
             }
         } else if (typeChose == 2) {
             System.out.println("Enter first number :");
-            Double num1 = input.nextDouble();
+            Double num1 = doubleInput(input);
             System.out.println("Enter Second number :");
-            Double num2 = input.nextDouble();
+            Double num2 = doubleInput(input);
             Double resolt = Math.max(num1, num2);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
@@ -501,17 +502,59 @@ public class ScientificCalculator {
     }
 
 
-    public static int askToDoAgine() {
-        System.err.println("contenue in same Opretion");
-        System.out.println("1.Yes");
-        System.out.println("2.No");
-        int chose = input.nextInt();
+    private static int intInput(Scanner scanner) {
+        int number = 0;
+        boolean isValidInput = false;
 
-        if (chose > 0 && chose < 3) {
-            return chose;
-        } else {
-            System.out.println("Chose 1 or 2");
-            askToDoAgine();
+        while (!isValidInput) {
+            try {
+                number = scanner.nextInt();
+                isValidInput = true; 
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! .");
+                scanner.next(); 
+            }
+        }
+        return number;
+    }
+
+
+    private static double doubleInput(Scanner scanner) {
+        double number = 0.0; 
+        boolean isValidInput = false;
+
+        while (!isValidInput) {
+            try {
+                number = scanner.nextDouble(); 
+                isValidInput = true;
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid input! Please enter a decimal number.");
+                scanner.next(); 
+            }
+        }
+        return number;
+    }
+
+
+
+
+
+
+
+    public static int askToDoAgine() {
+        boolean switchLoop = true ; 
+        while (switchLoop) {
+            System.err.println("contenue in same Opretion");
+            System.out.println("1.Yes");
+            System.out.println("2.No");
+            int chose = intInput(input);
+
+            if (chose > 0 && chose < 3) {
+                switchLoop = false ;
+                return chose;
+            } else {
+                System.out.println("Chose 1 or 2");
+            }
         }
         return 0;
     }

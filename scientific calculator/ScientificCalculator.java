@@ -21,7 +21,10 @@ public class ScientificCalculator {
                 break;
             case 5 :
                 SquareRoot();
-                break;    
+                break; 
+            case 6 :
+                powerOf();
+                break;
             default:
                 break;
         }
@@ -233,6 +236,25 @@ public class ScientificCalculator {
             }
 
         }
+
+        public static void powerOf() {
+                System.out.println("Enter first number :");
+                Double num1 = input.nextDouble();
+                System.out.println("power of");
+                System.out.println("Enter Second number :");
+                Double num2 = input.nextDouble();
+                Double resolt = Math.pow(num1, num2);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    powerOf();
+
+                } else {
+                    main(null);
+                }
+            }
+
+        
 
     
 

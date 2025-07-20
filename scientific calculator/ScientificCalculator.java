@@ -36,7 +36,16 @@ public class ScientificCalculator {
                 break;
             case 10 :
                 ln10();
-                break;          
+                break;
+            case 11 :
+                AbsoluteValue();
+                break; 
+            case 12 :
+                round();
+                break;
+            case 13 :
+                Ceiling();
+                break;                     
             default:
                 break;
         }
@@ -327,7 +336,68 @@ public class ScientificCalculator {
             }
         
 
-    
+            public static void AbsoluteValue() {
+                System.out.println("1.integer");
+                System.out.println("2.Double");
+                System.out.println("chose type :");
+                int typeChose = input.nextInt();
+                if (typeChose == 1) {
+                    System.out.println("Enter  number :");
+                    int num1 = input.nextInt();
+                    int resolt = Math.abs(num1) ;
+                    System.out.println("resoult : " + resolt);
+                    int repeat = askToDoAgine();
+                    if (repeat == 1) {
+                        AbsoluteValue();
+
+                    } else {
+                        main(null);
+                    }
+                } else if (typeChose == 2) {
+                    System.out.println("Enter first number :");
+                    Double num1 = input.nextDouble();
+                    Double resolt = Math.abs(num1);
+                    System.out.println("resoult : " + resolt);
+                    int repeat = askToDoAgine();
+                    if (repeat == 1) {
+                        AbsoluteValue();
+
+                    } else {
+                        main(null);
+                    }
+                }
+
+            }
+
+            public static void round() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                int resolt = (int)  Math.round(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    round();
+
+                } else {
+                    main(null);
+                }
+
+            }
+            // Ceiling
+            public static void Ceiling() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                int resolt = (int) Math.ceil(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    Ceiling();
+
+                } else {
+                    main(null);
+                }
+
+            }
 
 
 

@@ -10,7 +10,9 @@ public class ScientificCalculator {
             case 1:
                 Addition();
                 break;
-
+            case 2:
+                Subtraction();
+                break;
             default:
                 break;
         }
@@ -92,6 +94,60 @@ public class ScientificCalculator {
         }
 
     }
+
+    public static void Subtraction() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter first number :");
+            int num1 = input.nextInt();
+            System.out.println("Subtraction");
+            System.out.println("Enter Second number :");
+            int num2 = input.nextInt();
+            int resolt = num1 - num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Subtraction();
+
+            } else {
+                main(null);
+            }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            System.out.println("Subtraction");
+            System.out.println("Enter Second number :");
+            Double num2 = input.nextDouble();
+            Double resolt = num1 - num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Subtraction();
+
+            } else {
+                main(null);
+            }
+        }
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     public static int askToDoAgine() {
         System.err.println("contenue in same Opretion");

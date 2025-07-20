@@ -63,6 +63,7 @@ public class ScientificCalculator {
 
     }
 
+    // menu()
     public static int menu() {
 
         boolean loopSwitch = true;
@@ -102,6 +103,7 @@ public class ScientificCalculator {
 
     }
 
+    // Addition
     public static void Addition() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -139,6 +141,7 @@ public class ScientificCalculator {
 
     }
 
+    // Subtraction
     public static void Subtraction() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -178,6 +181,8 @@ public class ScientificCalculator {
 
     }
 
+
+    // Multiplication
     public static void Multiplication() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -214,7 +219,7 @@ public class ScientificCalculator {
         }
 
     }
-
+    // Division
     public static void Division() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -254,6 +259,7 @@ public class ScientificCalculator {
 
     }
 
+    // SquareRoot
     public static void SquareRoot() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -269,6 +275,7 @@ public class ScientificCalculator {
 
     }
 
+    // powerOf
     public static void powerOf() {
         System.out.println("Enter first number :");
         Double num1 = doubleInput(input);
@@ -286,6 +293,7 @@ public class ScientificCalculator {
         }
     }
 
+    // sin
     public static void sin() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -301,6 +309,7 @@ public class ScientificCalculator {
 
     }
 
+    // tan
     public static void tan() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -316,6 +325,7 @@ public class ScientificCalculator {
 
     }
 
+    // lng
     public static void ln() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -330,7 +340,7 @@ public class ScientificCalculator {
         }
 
     }
-
+// lng10
     public static void ln10() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -346,6 +356,7 @@ public class ScientificCalculator {
 
     }
 
+    // AbsoluteValue
     public static void AbsoluteValue() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -379,6 +390,7 @@ public class ScientificCalculator {
 
     }
 
+    // round
     public static void round() {
         System.out.println("Enter number :");
         Double num1 = doubleInput(input);
@@ -464,6 +476,7 @@ public class ScientificCalculator {
 
     }
 
+    // maxNum
     public static void maxNum() {
         System.out.println("1.integer");
         System.out.println("2.Double");
@@ -501,7 +514,7 @@ public class ScientificCalculator {
 
     }
 
-
+    // intInput 
     private static int intInput(Scanner scanner) {
         int number = 0;
         boolean isValidInput = false;
@@ -518,7 +531,7 @@ public class ScientificCalculator {
         return number;
     }
 
-
+    // doubleInput
     private static double doubleInput(Scanner scanner) {
         double number = 0.0; 
         boolean isValidInput = false;
@@ -540,7 +553,7 @@ public class ScientificCalculator {
 
 
 
-
+    // askToDoAgine
     public static int askToDoAgine() {
         boolean switchLoop = true ; 
         while (switchLoop) {

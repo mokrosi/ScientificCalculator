@@ -3,17 +3,23 @@ import java.util.*;
 public class ScientificCalculator {
 
     public static Scanner input = new Scanner(System.in);
-    public static void main (String [] args ){
-        menu();
-        
 
+    public static void main(String[] args) {
+        int menuChose = menu();
+        switch (menuChose) {
+            case 1:
+                Addition();
+                break;
+
+            default:
+                break;
+        }
 
     }
 
+    public static int menu() {
 
-    public static int  menu() {
-        
-        boolean loopSwitch = true ;
+        boolean loopSwitch = true;
 
         while (loopSwitch) {
 
@@ -35,12 +41,12 @@ public class ScientificCalculator {
             System.out.println("15.Maximum of two numbers");
             System.out.println("16.Helper methods");
             System.out.println("17.Exit");
-            System.out.print("chose Number : ");
+            System.out.println("chose Number : ");
             int menuChose = input.nextInt();
 
-            if (menuChose > 0 && menuChose <= 17){
+            if (menuChose > 0 && menuChose <= 17) {
                 loopSwitch = false;
-                return menuChose ;
+                return menuChose;
             }
             System.out.println("no item fiend pleas chose from 1 to 17 ");
 
@@ -48,5 +54,57 @@ public class ScientificCalculator {
 
         return 0;
 
+    }
+
+    public static void Addition() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter first number :");
+            int num1 = input.nextInt();
+            System.out.println("Enter Second number :");
+            int num2 = input.nextInt();
+            int resolt = num1 + num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Addition();
+
+            } else {
+                main(null);
+            }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            System.out.println("Enter Second number :");
+            Double num2 = input.nextDouble();
+            Double resolt = num1 + num2;
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                Addition();
+
+            } else {
+                main(null);
+            }
+        }
+
+    }
+
+    public static int askToDoAgine() {
+        System.err.println("contenue in same Opretion");
+        System.out.println("1.Yes");
+        System.out.println("2.No");
+        int chose = input.nextInt();
+
+        if (chose > 0 && chose < 3) {
+            return chose;
+        } else {
+            System.out.println("Chose 1 or 2");
+            askToDoAgine();
+        }
+        return 0;
     }
 }

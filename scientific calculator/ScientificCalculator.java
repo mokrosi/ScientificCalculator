@@ -25,6 +25,18 @@ public class ScientificCalculator {
             case 6 :
                 powerOf();
                 break;
+            case 7 :
+                sin();
+                break; 
+            case 8 :
+                tan();
+                break; 
+            case 9 :
+                ln();
+                break;
+            case 10 :
+                ln10();
+                break;          
             default:
                 break;
         }
@@ -254,19 +266,68 @@ public class ScientificCalculator {
                 }
             }
 
+            public static void sin() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                Double resolt = Math.sin(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    sin();
+
+                } else {
+                    main(null);
+                }
+
+            }
+
+            public static void tan() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                Double resolt = Math.tan(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    tan();
+
+                } else {
+                    main(null);
+                }
+
+            }
+
+            public static void ln() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                Double resolt = Math.log(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    ln();
+
+                } else {
+                    main(null);
+                }
+
+            }
+
+            public static void ln10() {
+                System.out.println("Enter number :");
+                Double num1 = input.nextDouble();
+                Double resolt = Math.log10(num1);
+                System.out.println("resoult : " + resolt);
+                int repeat = askToDoAgine();
+                if (repeat == 1) {
+                    ln10();
+
+                } else {
+                    main(null);
+                }
+
+            }
         
 
     
-
-
-
-
-
-
-
-
-
-
 
 
 

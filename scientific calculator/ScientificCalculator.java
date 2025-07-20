@@ -13,40 +13,51 @@ public class ScientificCalculator {
             case 2:
                 Subtraction();
                 break;
-            case 3 :
+            case 3:
                 Multiplication();
                 break;
-            case 4 :
+            case 4:
                 Division();
                 break;
-            case 5 :
+            case 5:
                 SquareRoot();
-                break; 
-            case 6 :
+                break;
+            case 6:
                 powerOf();
                 break;
-            case 7 :
+            case 7:
                 sin();
-                break; 
-            case 8 :
+                break;
+            case 8:
                 tan();
-                break; 
-            case 9 :
+                break;
+            case 9:
                 ln();
                 break;
-            case 10 :
+            case 10:
                 ln10();
                 break;
-            case 11 :
+            case 11:
                 AbsoluteValue();
-                break; 
-            case 12 :
+                break;
+            case 12:
                 round();
                 break;
-            case 13 :
+            case 13:
                 Ceiling();
-                break;                     
+                break;
+            case 14:
+                Floor();
+                break;
+            case 15:
+                minNum();
+                break;
+            case 16:
+                maxNum();
+                break;
             default:
+                System.out.println("thank you ");
+                System.exit(0);
                 break;
         }
 
@@ -72,9 +83,8 @@ public class ScientificCalculator {
             System.out.println("12.Round (to nearest long)");
             System.out.println("13.Ceiling (round up)");
             System.out.println("14.Floor (round down)");
-            System.out.println("14.Minimum of two numbers");
-            System.out.println("15.Maximum of two numbers");
-            System.out.println("16.Helper methods");
+            System.out.println("15.Minimum of two numbers");
+            System.out.println("16.Maximum of two numbers");
             System.out.println("0.Exit");
             System.out.println("chose Number : ");
             int menuChose = input.nextInt();
@@ -244,162 +254,251 @@ public class ScientificCalculator {
     }
 
     public static void SquareRoot() {
-            System.out.println("Enter number :");
-            Double num1 = input.nextDouble();
-            Double resolt = Math.sqrt(num1);
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        Double resolt = Math.sqrt(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            SquareRoot();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    public static void powerOf() {
+        System.out.println("Enter first number :");
+        Double num1 = input.nextDouble();
+        System.out.println("power of");
+        System.out.println("Enter Second number :");
+        Double num2 = input.nextDouble();
+        Double resolt = Math.pow(num1, num2);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            powerOf();
+
+        } else {
+            main(null);
+        }
+    }
+
+    public static void sin() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        Double resolt = Math.sin(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            sin();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    public static void tan() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        Double resolt = Math.tan(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            tan();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    public static void ln() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        Double resolt = Math.log(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            ln();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    public static void ln10() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        Double resolt = Math.log10(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            ln10();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    public static void AbsoluteValue() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter  number :");
+            int num1 = input.nextInt();
+            int resolt = Math.abs(num1);
             System.out.println("resoult : " + resolt);
             int repeat = askToDoAgine();
             if (repeat == 1) {
-                SquareRoot();
+                AbsoluteValue();
 
             } else {
                 main(null);
             }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            Double resolt = Math.abs(num1);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                AbsoluteValue();
 
+            } else {
+                main(null);
+            }
         }
 
-        public static void powerOf() {
-                System.out.println("Enter first number :");
-                Double num1 = input.nextDouble();
-                System.out.println("power of");
-                System.out.println("Enter Second number :");
-                Double num2 = input.nextDouble();
-                Double resolt = Math.pow(num1, num2);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    powerOf();
+    }
 
-                } else {
-                    main(null);
-                }
+    public static void round() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        int resolt = (int) Math.round(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            round();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    // Ceiling
+    public static void Ceiling() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        int resolt = (int) Math.ceil(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            Ceiling();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    // Floor
+    public static void Floor() {
+        System.out.println("Enter number :");
+        Double num1 = input.nextDouble();
+        int resolt = (int) Math.floor(num1);
+        System.out.println("resoult : " + resolt);
+        int repeat = askToDoAgine();
+        if (repeat == 1) {
+            Floor();
+
+        } else {
+            main(null);
+        }
+
+    }
+
+    // minNum
+    public static void minNum() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter first number :");
+            int num1 = input.nextInt();
+            System.out.println("Enter Second number :");
+            int num2 = input.nextInt();
+            int resolt = Math.min(num1, num2);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                minNum();
+
+            } else {
+                main(null);
             }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            System.out.println("Enter Second number :");
+            Double num2 = input.nextDouble();
+            Double resolt = Math.min(num1, num2);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                minNum();
 
-            public static void sin() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                Double resolt = Math.sin(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    sin();
-
-                } else {
-                    main(null);
-                }
-
+            } else {
+                main(null);
             }
+        }
 
-            public static void tan() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                Double resolt = Math.tan(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    tan();
+    }
 
-                } else {
-                    main(null);
-                }
+    public static void maxNum() {
+        System.out.println("1.integer");
+        System.out.println("2.Double");
+        System.out.println("chose type :");
+        int typeChose = input.nextInt();
+        if (typeChose == 1) {
+            System.out.println("Enter first number :");
+            int num1 = input.nextInt();
+            System.out.println("Enter Second number :");
+            int num2 = input.nextInt();
+            int resolt = Math.max(num1, num2);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                minNum();
 
+            } else {
+                main(null);
             }
+        } else if (typeChose == 2) {
+            System.out.println("Enter first number :");
+            Double num1 = input.nextDouble();
+            System.out.println("Enter Second number :");
+            Double num2 = input.nextDouble();
+            Double resolt = Math.max(num1, num2);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                maxNum();
 
-            public static void ln() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                Double resolt = Math.log(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    ln();
-
-                } else {
-                    main(null);
-                }
-
+            } else {
+                main(null);
             }
+        }
 
-            public static void ln10() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                Double resolt = Math.log10(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    ln10();
-
-                } else {
-                    main(null);
-                }
-
-            }
-        
-
-            public static void AbsoluteValue() {
-                System.out.println("1.integer");
-                System.out.println("2.Double");
-                System.out.println("chose type :");
-                int typeChose = input.nextInt();
-                if (typeChose == 1) {
-                    System.out.println("Enter  number :");
-                    int num1 = input.nextInt();
-                    int resolt = Math.abs(num1) ;
-                    System.out.println("resoult : " + resolt);
-                    int repeat = askToDoAgine();
-                    if (repeat == 1) {
-                        AbsoluteValue();
-
-                    } else {
-                        main(null);
-                    }
-                } else if (typeChose == 2) {
-                    System.out.println("Enter first number :");
-                    Double num1 = input.nextDouble();
-                    Double resolt = Math.abs(num1);
-                    System.out.println("resoult : " + resolt);
-                    int repeat = askToDoAgine();
-                    if (repeat == 1) {
-                        AbsoluteValue();
-
-                    } else {
-                        main(null);
-                    }
-                }
-
-            }
-
-            public static void round() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                int resolt = (int)  Math.round(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    round();
-
-                } else {
-                    main(null);
-                }
-
-            }
-            // Ceiling
-            public static void Ceiling() {
-                System.out.println("Enter number :");
-                Double num1 = input.nextDouble();
-                int resolt = (int) Math.ceil(num1);
-                System.out.println("resoult : " + resolt);
-                int repeat = askToDoAgine();
-                if (repeat == 1) {
-                    Ceiling();
-
-                } else {
-                    main(null);
-                }
-
-            }
-
-
+    }
 
 
     public static int askToDoAgine() {

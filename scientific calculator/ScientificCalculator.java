@@ -19,6 +19,9 @@ public class ScientificCalculator {
             case 4 :
                 Division();
                 break;
+            case 5 :
+                SquareRoot();
+                break;    
             default:
                 break;
         }
@@ -48,11 +51,11 @@ public class ScientificCalculator {
             System.out.println("14.Minimum of two numbers");
             System.out.println("15.Maximum of two numbers");
             System.out.println("16.Helper methods");
-            System.out.println("17.Exit");
+            System.out.println("0.Exit");
             System.out.println("chose Number : ");
             int menuChose = input.nextInt();
 
-            if (menuChose > 0 && menuChose <= 17) {
+            if (menuChose > -1 && menuChose <= 16) {
                 loopSwitch = false;
                 return menuChose;
             }
@@ -215,6 +218,23 @@ public class ScientificCalculator {
         }
 
     }
+
+    public static void SquareRoot() {
+            System.out.println("Enter number :");
+            Double num1 = input.nextDouble();
+            Double resolt = Math.sqrt(num1);
+            System.out.println("resoult : " + resolt);
+            int repeat = askToDoAgine();
+            if (repeat == 1) {
+                SquareRoot();
+
+            } else {
+                main(null);
+            }
+
+        }
+
+    
 
 
 
